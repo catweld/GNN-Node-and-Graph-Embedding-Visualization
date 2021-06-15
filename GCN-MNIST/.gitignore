@@ -1,0 +1,9 @@
+tags
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.coverage
+data/
+test_data/VOCDevKit
+test_data/tiny-imagenet-200

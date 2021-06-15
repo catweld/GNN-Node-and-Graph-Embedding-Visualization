@@ -1,0 +1,21 @@
+language: python
+sudo: required
+dist: trusty
+cache: data
+matrix:
+  include:
+    - python: 2.7
+    - python: 3.4
+    - python: 3.5
+    - python: 3.6
+install:
+  - pip install -r requirements_test.txt
+  - pip install codecov
+script:
+  - pep8 .
+  - flake8 .
+  - nosetests --with-coverage --nologcapture
+after_success:
+  - codecov
+notifications:
+  email: false

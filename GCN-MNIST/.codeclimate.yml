@@ -1,0 +1,34 @@
+engines:
+  duplication:
+    enabled: true
+    exclude_paths:
+      - "**_test.py"
+      - "**pascal_voc.py"
+      - "pascal_conv2d.py"
+      - "cifar_conv2d.py"
+      - "mnist_spatial.py"
+    config:
+      languages:
+        python:
+          mass_threshold: 120
+  radon:
+    enabled: true
+    config:
+      threshold: "C"
+    exclude_paths:
+      - "**train.py"
+  fixme:
+    enabled: true
+    exclude_paths:
+      - "notebooks/"
+  pep8:
+    enabled: true
+  markdownlint:
+    enabled: true
+  shellcheck:
+    enabled: true
+ratings:
+  paths:
+    - "**.py"
+    - "**.sh"
+    - "**.md"
